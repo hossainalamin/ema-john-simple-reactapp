@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../images/giphy.gif'
+import './product.css';
 
 const Product = (probs) => {
     const style = {
@@ -15,7 +16,7 @@ const Product = (probs) => {
                 <h1>Name : {probs.name}</h1>
                 <h4>Specification : {probs.specification}</h4>
                 <p>Price : {probs.price}</p>
-                <hr></hr>
+                <button className='cart-button'>Add to cart</button>
             </div>
         </div>
     );

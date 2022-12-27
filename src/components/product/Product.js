@@ -17,7 +17,7 @@ const Product = (probs) => {
                 <h4>Specification : {probs.specification}</h4>
                 <p>Price : {probs.price}</p>
                 <button className='cart-button' 
-                onClick={ () => probs.addEventHander(probs.name)}>Add to cart</button>
+                onClick={ () => probs.addEventHander(probs)}>Add to cart</button>
             </div>
         </div>
     );

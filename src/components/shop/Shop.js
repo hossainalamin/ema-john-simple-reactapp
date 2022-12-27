@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './shop.css';
 import Product from '../product/Product';
+import Cart from '../Cart/Cart';
 const Shop = () => {
     const first10 = [
         {"name":"mobile","specification":"Nice mobile phone","price":"20000"},
@@ -28,8 +29,7 @@ const Shop = () => {
             </ul>
             </div>
             <div className='card-container'>
-                <h3>Add to Cart</h3>
-                <p>Order summery : {cart.length}</p>
+               <Cart cart={cart}></Cart>
             </div>
         </div>
     );

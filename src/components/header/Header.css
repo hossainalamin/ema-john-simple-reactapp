@@ -1,8 +1,13 @@
-.header img{
+.header{
+    text-align: right;
+}
+.image{
+    float: left;
     height: 80px;
 }
-.header{
-    text-align: center;
+.image img{
+    height: 30px;
+    color: aliceblue;
 }
 .header nav{
     background-color: black;

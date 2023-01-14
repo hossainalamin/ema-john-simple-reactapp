@@ -1,13 +1,22 @@
-import './App.css';
-import Header from './components/header/Header.js'
-import Shop from './components/shop/Shop';
-function App() {
+import React from 'react';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import Main from './layouts/Main';
+
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path : '/',
+      element : <Main></Main>
+    }
+  ])
   return (
     <div>
-      <Header></Header>
-      <Shop></Shop>
+      <RouterProvider router = {router}></RouterProvider>
     </div>
   );
-}
+};
 
 export default App;

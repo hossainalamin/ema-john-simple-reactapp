@@ -5,3 +5,8 @@
     width : 70%;
     border-right : 1px solid darkgrey;
 }
+.card-container{
+    background-color: bisque;
+    width: 350px;
+    padding: 10px;
+}

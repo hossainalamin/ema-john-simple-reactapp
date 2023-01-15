@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from '../../images/giphy.gif'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 import './product.css';
 
 const Product = (probs) => {
@@ -9,16 +11,17 @@ const Product = (probs) => {
     }
     return (
         <div className='div-container'>
-            <div>
-               <img src={logo} alt="logo" style={style}></img>
-            </div>
-            <div>
-                <h1>Name : {probs.name}</h1>
-                <h4>Specification : {probs.specification}</h4>
-                <p>Price : {probs.price}</p>
-                <button className='cart-button' 
-                onClick={ () => probs.addEventHander(probs)}>Add to cart</button>
-            </div>
+            <Card style={{ width: '18rem' }}>
+            <Card.Img variant="top" src={logo} style={style} />
+            <Card.Body>
+                <Card.Title>{probs.name}</Card.Title>
+                <Card.Text>
+                {probs.specification}.
+                </Card.Text>
+                <Button variant="primary" className='cart-button' 
+                onClick={ () => probs.addEventHander(probs)}>Add to cart</Button>
+            </Card.Body>
+            </Card>
         </div>
     );
 };

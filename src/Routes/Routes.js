@@ -13,6 +13,7 @@ export const router = createBrowserRouter([
   children : [
     {
       path : '/',
+      loader:()=>fetch('products.json'),
       element : <Shop></Shop>
     },
     {
@@ -21,6 +22,9 @@ export const router = createBrowserRouter([
     },
     {
       path : '/orders',
+      loader : async()=>{
+        return fetch('products.json');
+      },
       element : <Orders></Orders>
     },
     {

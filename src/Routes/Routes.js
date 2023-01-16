@@ -5,7 +5,7 @@ import Product from "../components/product/Product";
 import Inventory from "../components/Inventory/Inventory"
 import Orders from "../components/Oders/Orders";
 import About from  "../components/About/About";
-
+import '../utilities/fakedb';
 export const router = createBrowserRouter([
 {
   path : '/',
@@ -13,7 +13,7 @@ export const router = createBrowserRouter([
   children : [
     {
       path : '/',
-      loader:()=>fetch('products.json'),
+      loader:()=>fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json'),
       element : <Shop></Shop>
     },
     {
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
     {
       path : '/orders',
       loader : async()=>{
-        return fetch('products.json');
+        return fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json');
       },
       element : <Orders></Orders>
     },

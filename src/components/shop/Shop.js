@@ -3,37 +3,21 @@ import './shop.css';
 import Product from '../product/Product';
 import Cart from '../Cart/Cart';
 import { useLoaderData } from 'react-router-dom';
+import '../../utilities/fakedb';
 const Shop = () => {
-    // const first10 = [
-    //     {"name":"mobile","specification":"Nice mobile phone","price":"20000"},
-    //     {"name":"television","specification":"Nice television","price":"200000"},
-    //     {"name":"computer","specification":"Nice computer","price":"2000000"},
-    //     {"name":"laptop","specification":"Nice laptop","price":"20000"},
-    //     {"name":"watch","specification":"Nice watch","price":"200"},
-    //     {"name":"wallet","specification":"Nice wallet","price":"201200"},
-    //     {"name":"speaker","specification":"Nice speaker","price":"2000"},
-    //     {"name":"cloths","specification":"Nice cloths","price":"2000"},
-    //     {"name":"shoe","specification":"Nice shoe","price":"200"},
-    // ]
-    const addEventHander = (products)=> {
-        const newCart = [...cart, products];
-        setCart(newCart);
-    }
-    const [cart, setCart] = useState([]);
     const products = useLoaderData();
-    console.log(products);
     return (
         <div className='div-container'>
             <div className='shop-container'>
                 <div className='row'>
+                    {products.length}
                     <div className = "col-md-4">
-                {/* {products.map(pd => <Product name={pd.name} specification = {pd.specification} 
-                price = {pd.price} addEventHander = {addEventHander}></Product>)}   */}
+                {/* {products.map(pd => <Product name={pd.name} ></Product>)}   */}
                 </div>
                 </div>          
             </div>
             <div className='card-container'>
-               <Cart cart={cart}></Cart>
+               {/* <Cart cart={cart}></Cart> */}
             </div>
         </div>
     );

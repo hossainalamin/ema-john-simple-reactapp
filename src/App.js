@@ -1,8 +1,6 @@
 import React from 'react';
 import {router} from './Routes/Routes';
-import {
-  RouterProvider
-} from "react-router-dom";
+import {RouterProvider} from "react-router-dom";
 const App = () => {
   return (
     <div>
@@ -10,5 +8,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
